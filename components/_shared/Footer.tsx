@@ -6,52 +6,54 @@ import Container from "../container";
 export default function Footer() {
   const navigation = ["Product", "Features"];
   return (
-    <Container>
-      <div className="flex items-start justify-between max-w-screen-xl pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700">
-        <div className="w-2/5">
-          <Link
-            href="/"
-            className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100"
-          >
-            <Image
-              src="/img/logo.svg"
-              alt="N"
-              width="32"
-              height="32"
-              className="w-8"
-            />
-            <span>Nextly</span>
-          </Link>
-        </div>
-
-        <div className="w-1/5 flex w-full -mt-2 -ml-3 lg:ml-0">
-          {navigation.map((item, index) => (
+    <>
+      <Container>
+        <div className="w-full flex items-start justify-between max-w-screen-xl pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700">
+          <div className="w-2/5">
             <Link
-              key={index}
               href="/"
-              className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+              className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100"
             >
-              {item}
+              <Image
+                src="/img/logo.svg"
+                alt="N"
+                width="32"
+                height="32"
+                className="w-8"
+              />
+              <span>Nextly</span>
             </Link>
-          ))}
-        </div>
+          </div>
 
-        <div className="relative w-2/5">
-          <div className="absolute right-0">
-            <div className="flex text-gray-400 dark:text-gray-500">
-              <a
-                href="https://twitter.com/web3templates"
-                target="_blank"
-                rel="noopener"
+          <div className="w-1/5 flex justify-center">
+            {navigation.map((item, index) => (
+              <Link
+                key={index}
+                href="/"
+                className="w-full px-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
               >
-                <span className="sr-only">Twitter</span>
-                <Twitter />
-              </a>
+                {item}
+              </Link>
+            ))}
+          </div>
+
+          <div className="relative w-2/5">
+            <div className="absolute right-0">
+              <div className="flex text-gray-400 dark:text-gray-500">
+                <a
+                  href="https://twitter.com/web3templates"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span className="sr-only">Twitter</span>
+                  <Twitter />
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </>
   );
 }
 

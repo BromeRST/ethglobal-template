@@ -29,9 +29,6 @@ init({
   },
 });
 
-// const MMSDK = new MetaMaskSDK();
-// const ethereum = MMSDK.getProvider();
-
 const ConnectBtn = () => {
   const { handleConnect } = useConnect();
   const [{ address }] = useUserContext();
